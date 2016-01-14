@@ -1,13 +1,4 @@
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-/**
-*  HTML5 Simple Canvas Example
-*
-*  @author William Malone (www.williammalone.com)
-*/
+
 "use strict";
 
 var canvasWidth = 1000;
@@ -154,8 +145,6 @@ function checkUp(e) {
 
             case player[5].leftKey: player[5].leftPressed = false; break;  
             case player[5].rightKey: player[5].rightPressed = false; break;
-                
-            case keyCodeToName(spaceCode): pause(); break; 
         }
     }
 }
@@ -390,6 +379,7 @@ function start() {
     }
 }
 function newRound() {
+    isPaused = true;
     context.closePath();
     showGame();
     buildAllowedSpaceSet();
